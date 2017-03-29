@@ -41,6 +41,10 @@ export class SmartTables {
         title: 'Lensmen (5)',
         type: 'string'
       },
+       filmibeat: {
+        title: 'Filmi Beat (5)',
+        type: 'string'
+      }
     }
   };
 

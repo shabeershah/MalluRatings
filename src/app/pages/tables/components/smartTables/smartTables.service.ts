@@ -51,8 +51,8 @@ export class SmartTablesService {
   'Content-Type': 'application/json; charset=utf-8'});
 
   getFilms() : Observable<any> {
-   return this.http.get("https://film-reviews.herokuapp.com/get/films/",{headers: this.headers})
-   //return this.http.get("http://0.0.0.0:8000/get/films",{headers: this.headers})
+   return this.http.get("https://film-reviews.herokuapp.com/get/50/films/",{headers: this.headers})
+   //return this.http.get("http://0.0.0.0:8000/get/50/films",{headers: this.headers})
                .map(response => response.json())
                .catch(this.handleError);
   }

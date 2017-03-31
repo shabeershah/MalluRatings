@@ -19,7 +19,9 @@ import { PAGES_MENU } from './pages.menu';
 
    
 
-      <div class="al-footer-right">Created with <i style="color:red" class="fa fa-heart" aria-hidden="true"></i></div>
+      <div class="al-footer-right">Created with 
+      <img src="assets/img/heart_animated.gif" width="25px">
+      </div>
 
        <div class="dropdown al-user-profile">
       <a class="myProfile" id="user-profile-dd" href="https://www.linkedin.com/in/shabeershah/">

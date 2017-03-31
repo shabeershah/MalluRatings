@@ -44,6 +44,10 @@ export class SmartTables {
        filmibeat: {
         title: 'Filmi Beat (5)',
         type: 'string'
+      },
+       bookmyshow: {
+        title: 'BookmyShow (5)',
+        type: 'string'
       }
     }
   };

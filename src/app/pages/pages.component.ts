@@ -3,6 +3,8 @@ import { Routes } from '@angular/router';
 
 import { BaMenuService } from '../theme';
 import { PAGES_MENU } from './pages.menu';
+import { PageService } from './pages.service';
+
 
 @Component({
   selector: 'pages',
@@ -17,8 +19,6 @@ import { PAGES_MENU } from './pages.menu';
     </div>
     <footer class="al-footer clearfix">
 
-   
-
       <div class="al-footer-right">Created with 
       <img src="assets/img/heart_animated.gif" width="25px">
       </div>
@@ -30,10 +30,7 @@ import { PAGES_MENU } from './pages.menu';
     </div>
       <div class="al-footer-main clearfix">
         <ul class="al-share clearfix">
-          <li><i class="socicon socicon-facebook"></i></li>
-          <li><i class="socicon socicon-twitter"></i></li>
-          <li><i class="socicon socicon-google"></i></li>
-          <li><i class="socicon socicon-github"></i></li>
+          <li>{{ visitors_count }} Visitors today !</li>
         </ul>
       </div>
     </footer>
@@ -41,11 +38,20 @@ import { PAGES_MENU } from './pages.menu';
     `
 })
 export class Pages {
-
-  constructor(private _menuService: BaMenuService,) {
+  
+  visitors_count = 2
+  constructor(private _menuService: BaMenuService,private page_service: PageService) {
   }
 
   ngOnInit() {
     this._menuService.updateMenuByRoutes(<Routes>PAGES_MENU);
+    this.getDailyHits();
+   }
+
+  getDailyHits() {
+    this.page_service.getDailyHits().subscribe((data) => {
+      console.log(data)
+      this.visitors_count = data.count
+    });
   }
 }

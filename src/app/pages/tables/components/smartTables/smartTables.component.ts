@@ -22,15 +22,15 @@ export class SmartTables {
         type: 'string'
       },
       timesofindia: {
-        title: 'Times of India (5)',
+        title: 'TOI (5)',
         type: 'string'
       },
       indiaglitz: {
-        title: 'India Glitz (5)',
+        title: 'IG (5)',
         type: 'string'
       },
       nowrunning: {
-        title: 'Now Running (5)',
+        title: 'NR (5)',
         type: 'string'
       },
        imdb: {
@@ -38,19 +38,23 @@ export class SmartTables {
         type: 'string'
       },
        lensmen: {
-        title: 'Lensmen (5)',
+        title: 'LM(5)',
         type: 'string'
       },
        filmibeat: {
-        title: 'Filmi Beat (5)',
+        title: 'FB (5)',
         type: 'string'
       },
        bookmyshow: {
-        title: 'BookmyShow (5)',
+        title: 'BS (5)',
         type: 'string'
       },
        firstpost: {
-        title: 'FIRSTPOST (5)',
+        title: 'FP (5)',
+        type: 'string'
+      },
+       malluratings: {
+        title: 'MR(5)',
         type: 'string'
       }
     }

@@ -48,6 +48,10 @@ export class SmartTables {
        bookmyshow: {
         title: 'BookmyShow (5)',
         type: 'string'
+      },
+       firstpost: {
+        title: 'FIRSTPOST (5)',
+        type: 'string'
       }
     }
   };

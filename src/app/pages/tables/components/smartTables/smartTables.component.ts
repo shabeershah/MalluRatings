@@ -18,19 +18,19 @@ export class SmartTables {
   settings = {
     columns: {
       film: {
-        title: 'Film Name',
+        title: 'Malyalam Movie Name',
         type: 'string'
       },
       timesofindia: {
-        title: 'TOI (5)',
+        title: 'TimesOfIndia (5)',
         type: 'string'
       },
       indiaglitz: {
-        title: 'IG (5)',
+        title: 'IndiaGlitz (5)',
         type: 'string'
       },
       nowrunning: {
-        title: 'NR (5)',
+        title: 'NowRunning (5)',
         type: 'string'
       },
        imdb: {
@@ -38,26 +38,26 @@ export class SmartTables {
         type: 'string'
       },
        lensmen: {
-        title: 'LM(5)',
+        title: 'Lensmen(5)',
         type: 'string'
       },
        filmibeat: {
-        title: 'FB (5)',
+        title: 'FilmiBeat (5)',
         type: 'string'
       },
        bookmyshow: {
-        title: 'BS (5)',
+        title: 'BookmyShow (5)',
         type: 'string'
       },
        firstpost: {
-        title: 'FP (5)',
+        title: 'FirstPost (5)',
         type: 'string'
       },
        malluratings: {
-        title: 'MR(5)',
-        type: 'string'
+        title: 'Critic(5)',
+        type: 'html'
       }
-    }
+      }
   };
 
   source: LocalDataSource = new LocalDataSource();

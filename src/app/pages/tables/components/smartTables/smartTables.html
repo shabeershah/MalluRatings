@@ -1,9 +1,88 @@
 <div class="widgets">
 
-  <div class="row">
-    <ba-card title="" baCardClass="with-scroll">
+<style>
+	.resCard {
+		padding: 1%;
+	}
+	.resCard .score{
+		    font-size: 30px;
+		    font-weight: 600;
+		    display: block;
+		    padding: 5%;
+	}
+	.filmName {
+		font-size: 24px;
+	    font-style: italic;
+	    font-weight: 500;
+	}
+</style>
+
+<div class="button-wrapper" [hidden]="!selectedItem.film" (click)="goBack()">
+  <button class="btn btn-default" type="button">View All Films</button>
+</div>
+
+  <div class="row" [hidden]="selectedItem.film">
+  		
+  		<div class="col-xs-6 col-md-2" *ngFor="let item of filmsList; let myIndex = index" style="text-align: center;">
+            <div style="boder:2px solid;padding:1%" (click)="selectFilm(item)">
+            <img src="{{item.film_url}}"style=" width: 75%;">
+            <div style="padding: 3%">
+            <a>{{item.film}}</a>
+            </div>
+            </div>
+        </div>
+
+   <!--  <ba-card title="" baCardClass="with-scroll">
       <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)"></ng2-smart-table>
-    </ba-card>
+    </ba-card> -->
   </div>
 
+  <div class="row" style="text-align: center" [hidden]="!selectedItem.film">
+  	<div class="col-xs-12 col-md-12" style="text-align: center;">
+            <div style="boder:2px solid;padding:1%">
+            <img src="{{selectedItem.film_url}}"style=" width: 15%;">
+            <div style="padding: 1%">
+            <a class="filmName">{{selectedItem.film}}</a>
+            </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 resCard" [hidden]="!selectedItem.imdb">
+        	<span>IMDB</span>
+        	<span class="score">{{selectedItem.imdb}}</span>
+	    </div>
+	    <div class="col-md-4 resCard" [hidden]="!selectedItem.bookmyshow">
+        	<span>BOOKMYSHOW</span>
+        	<span class="score">{{selectedItem.bookmyshow}}</span>
+	    </div>
+	    <div class="col-md-4 resCard" [hidden]="!selectedItem.lensmen">
+        	<span>LENSMEN</span>
+        	<span class="score">{{selectedItem.lensmen}}</span>
+	    </div>
+	    <div class="col-md-4 resCard" [hidden]="!selectedItem.filmibeat">
+        	<span>FILMIBEAT</span>
+        	<span class="score">{{selectedItem.filmibeat}}</span>
+	    </div>
+	    <div class="col-md-4 resCard" [hidden]="!selectedItem.firstpost">
+        	<span>FIRSTPOST</span>
+        	<span class="score">{{selectedItem.firstpost}}</span>
+	    </div>
+	    <div class="col-md-4 resCard" [hidden]="!selectedItem.indiaglitz">
+        	<span>INDIAGLITZ</span>
+        	<span class="score">{{selectedItem.indiaglitz}}</span>
+	    </div>
+	    <div class="col-md-4 resCard" [hidden]="!selectedItem.nowrunning">
+        	<span>NOWRUNNING</span>
+        	<span class="score">{{selectedItem.nowrunning}}</span>
+	    </div>
+	    <div class="col-md-4 resCard" [hidden]="!selectedItem.timesofindia">
+        	<span>TIMESOFINDIA</span>
+        	<span class="score">{{selectedItem.timesofindia}}</span>
+	    </div>
+	    <div class="col-md-4 resCard" [hidden]="!selectedItem.critc">
+        	<span>MALLURATINGS</span>
+        	<span class="score">{{selectedItem.critc}}</span>
+	    </div>
 </div>
+  </div>
+

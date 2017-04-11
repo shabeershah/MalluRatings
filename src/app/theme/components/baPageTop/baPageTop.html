@@ -1,12 +1,17 @@
 <div class="page-top clearfix" baScrollPosition maxHeight="50" (scrollChange)="scrolledChanged($event)"
      [ngClass]="{scrolled: isScrolled}">
-  <a routerLink="/pages/dashboard" class="al-logo clearfix"><span>Malayalam </span>Movie  Ratings</a><b style="font-size: 12px">Beta</b>
+     <div class="">
+	  <a routerLink="/pages/dashboard" class="al-logo clearfix"><span>Malayalam </span>Movie  Ratings</a>
+	  <b style="font-size: 12px">Beta</b>
+	  </div>
 
+  
 
   <div class="user-profile clearfix">
-
-  	
-    
+   <div class="search" >
+    <i class="fa fa-search"></i>
+    <input id="searchInput" type="text" placeholder="Search for...">
+  </div>
     <ba-msg-center></ba-msg-center>
   </div>
 </div>

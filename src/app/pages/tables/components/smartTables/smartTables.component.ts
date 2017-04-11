@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import { SmartTablesService } from './smartTables.service';
 import { LocalDataSource } from 'ng2-smart-table';
+import { ModalDirective } from 'ng2-bootstrap';
+
 
 import 'style-loader!./smartTables.scss';
 
@@ -14,6 +16,8 @@ export class SmartTables {
   query: string = '';
   errorMessage: string;
   mode = 'Observable';
+  filmsList = []
+  selectedItem = {}
 
   settings = {
     columns: {
@@ -72,7 +76,18 @@ export class SmartTables {
     this.service.getFilms().subscribe((data) => {
       this.source.load(data);
       console.log(data)
+      this.filmsList = data
     });
+  }
+
+  selectFilm(item): void{
+    this.selectedItem = item
+    console.log('Selected Item');
+    console.log(item)
+  }
+
+  goBack(): void{
+   this.selectedItem = {}
   }
 
   onDeleteConfirm(event): void {
@@ -83,3 +98,5 @@ export class SmartTables {
     }
   }
 }
+
+

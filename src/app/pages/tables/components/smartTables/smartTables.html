@@ -39,7 +39,7 @@
 
   <div class="row" [hidden]="selectedItem.film">
   	<div class="col-md-12">
-	  <div class="search col-md-4 col-md-offset-4" >
+	  <div class="search col-xs-10 col-md-4 col-md-offset-4" >
 	    <i class="fa fa-search" style="margin: 2px 13px 2px 13px;"></i>
 	    <input #searchBox id="searchInput" type="text" placeholder="Search for..." (keyup)="search(searchBox.value)">
 	  </div>
@@ -62,13 +62,25 @@
 
   <div class="row" style="text-align: center" [hidden]="!selectedItem.film">
 
-  	<div class="col-xs-12 col-md-12" style="text-align: center;">
+  		<div class="row" style="text-align: left;margin-bottom: 2%">
+  		<div class="col-xs-12 col-md-6" style="text-align: center;">
             <div style="boder:2px solid;padding:1%">
-            <img src="{{selectedItem.film_url}}"style=" width: 15%;">
-            <div style="padding: 1%">
+            <img src="{{selectedItem.film_url}}" style="width: 35%;float:right">
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+        	<div style="padding-top: 2%" class="col-md-12">
             <a class="filmName">{{selectedItem.film}}</a>
             </div>
-            </div>
+           <div class="col-md-12" style="padding-top: 2%"><span>{{selectedItem.story}}</span></div>
+           <div class="col-md-12" style="padding-top: 2%"><span>Director : </span> {{selectedItem.director}}</div>
+           <div class="col-md-12"><span>Casts : </span> {{selectedItem.cast}}</div>
+           <div class="col-md-12" style="padding-top: 2%">
+           	 <i class="fa fa-star" aria-hidden="true" ng></i>
+           	 {{selectedItem.rating}}
+           </div>
+
+        </div>
         </div>
         
         <div class="col-md-4 resCard" [hidden]="!selectedItem.imdb">

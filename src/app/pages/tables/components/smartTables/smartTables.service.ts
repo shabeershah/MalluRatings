@@ -8,40 +8,7 @@ export class SmartTablesService {
 
   constructor ( private http: Http ){
     }
-
-  smartTableData = [
-    {
-      filmName: 1,
-      toi: 'Mark',
-      ig: 'Otto',
-      nr: '@mdo',
-    },
-    {
-      filmName: 2,
-      toi: 'Mark',
-      ig: 'Otto',
-      nr: '@mdo',
-    },
-    {
-      filmName: 3,
-      toi: 'Mark',
-      ig: 'Otto',
-      nr: '@mdo',
-    },
-    {
-      filmName: 4,
-      toi: 'Mark',
-      ig: 'Otto',
-      nr: '@mdo',
-    },
-    {
-      filmName: 5,
-      toi: 'Mark',
-      ig: 'Otto',
-      nr: '@mdo',
-    }
-    
-  ];
+  
 
   getDataObservable(url:string) {
    

@@ -15,13 +15,36 @@
 	    font-style: italic;
 	    font-weight: 500;
 	}
+
+	.floatLeft {
+		float: left !important;
+	}
+
+	.floatRight {
+		float: right !important;
+	}
+	.search {
+        display: block;
+	    width: 35%;
+	    border: 1px solid;
+	    border-radius: 15px 15px;
+	    margin: 0% 0 2% 33%;
+	}
 </style>
 
 <div class="button-wrapper" [hidden]="!selectedItem.film" (click)="goBack()">
-  <button class="btn btn-default" type="button">View All Films</button>
+  <button class="btn btn-default floatLeft" type="button">Back</button>
+  <button class="btn btn-default floatRight" type="button">View All Films</button>
 </div>
 
   <div class="row" [hidden]="selectedItem.film">
+  	<div class="col-md-12">
+	  <div class="search col-md-4 col-md-offset-4" >
+	    <i class="fa fa-search" style="margin: 2px 13px 2px 13px;"></i>
+	    <input #searchBox id="searchInput" type="text" placeholder="Search for..." (keyup)="search(searchBox.value)">
+	  </div>
+	  </div>
+	  <div class="clearfix"></div>
   		
   		<div class="col-xs-6 col-md-2" *ngFor="let item of filmsList; let myIndex = index" style="text-align: center;">
             <div style="boder:2px solid;padding:1%" (click)="selectFilm(item)">
@@ -38,6 +61,7 @@
   </div>
 
   <div class="row" style="text-align: center" [hidden]="!selectedItem.film">
+
   	<div class="col-xs-12 col-md-12" style="text-align: center;">
             <div style="boder:2px solid;padding:1%">
             <img src="{{selectedItem.film_url}}"style=" width: 15%;">
@@ -49,39 +73,39 @@
         
         <div class="col-md-4 resCard" [hidden]="!selectedItem.imdb">
         	<span>IMDB</span>
-        	<span class="score">{{selectedItem.imdb}}</span>
+        	<span class="score">{{selectedItem.imdb}}/10</span>
 	    </div>
 	    <div class="col-md-4 resCard" [hidden]="!selectedItem.bookmyshow">
         	<span>BOOKMYSHOW</span>
-        	<span class="score">{{selectedItem.bookmyshow}}</span>
+        	<span class="score">{{selectedItem.bookmyshow}}/5</span>
 	    </div>
 	    <div class="col-md-4 resCard" [hidden]="!selectedItem.lensmen">
         	<span>LENSMEN</span>
-        	<span class="score">{{selectedItem.lensmen}}</span>
+        	<span class="score">{{selectedItem.lensmen}}/5</span>
 	    </div>
 	    <div class="col-md-4 resCard" [hidden]="!selectedItem.filmibeat">
         	<span>FILMIBEAT</span>
-        	<span class="score">{{selectedItem.filmibeat}}</span>
+        	<span class="score">{{selectedItem.filmibeat}}/5</span>
 	    </div>
 	    <div class="col-md-4 resCard" [hidden]="!selectedItem.firstpost">
         	<span>FIRSTPOST</span>
-        	<span class="score">{{selectedItem.firstpost}}</span>
+        	<span class="score">{{selectedItem.firstpost}}/5</span>
 	    </div>
 	    <div class="col-md-4 resCard" [hidden]="!selectedItem.indiaglitz">
         	<span>INDIAGLITZ</span>
-        	<span class="score">{{selectedItem.indiaglitz}}</span>
+        	<span class="score">{{selectedItem.indiaglitz}}/5</span>
 	    </div>
 	    <div class="col-md-4 resCard" [hidden]="!selectedItem.nowrunning">
         	<span>NOWRUNNING</span>
-        	<span class="score">{{selectedItem.nowrunning}}</span>
+        	<span class="score">{{selectedItem.nowrunning}}/5</span>
 	    </div>
 	    <div class="col-md-4 resCard" [hidden]="!selectedItem.timesofindia">
         	<span>TIMESOFINDIA</span>
-        	<span class="score">{{selectedItem.timesofindia}}</span>
+        	<span class="score">{{selectedItem.timesofindia}}/5</span>
 	    </div>
 	    <div class="col-md-4 resCard" [hidden]="!selectedItem.malluratings">
         	<span>MALLURATINGS</span>
-        	<span class="score">{{selectedItem.malluratings}}</span>
+        	<span class="score">{{selectedItem.malluratings}}/5</span>
 	    </div>
 </div>
   </div>

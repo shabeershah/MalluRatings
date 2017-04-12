@@ -18,6 +18,7 @@ export class SmartTables {
   mode = 'Observable';
   filmsList = []
   selectedItem = {}
+  filmsCopy = []
 
   settings = {
     columns: {
@@ -77,6 +78,7 @@ export class SmartTables {
       this.source.load(data);
       console.log(data)
       this.filmsList = data
+      this.filmsCopy = data
     });
   }
 
@@ -88,6 +90,19 @@ export class SmartTables {
 
   goBack(): void{
    this.selectedItem = {}
+  }
+
+  public search(word) {
+    console.log(word);
+    this.filmsList = this.filmsCopy 
+    if(!word){
+      this.filmsList = this.filmsCopy      
+    } else {
+        this.filmsList = Object.assign([], this.filmsList).filter(
+        item => item.film.toLowerCase().indexOf(word.toLowerCase()) > -1
+     )
+    }
+     
   }
 
   onDeleteConfirm(event): void {

@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
 
 import {GlobalState} from '../../../global.state';
+import {SmartTables} from '../../../pages/tables/components/smartTables/smartTables.component'
+
 
 import 'style-loader!./baPageTop.scss';
 
@@ -12,6 +14,8 @@ export class BaPageTop {
 
   public isScrolled:boolean = false;
   public isMenuCollapsed:boolean = false;
+  private smartComponent: SmartTables;
+  films = []
 
   constructor(private _state:GlobalState) {
     this._state.subscribe('menu.isCollapsed', (isCollapsed) => {

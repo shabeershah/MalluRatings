@@ -19,6 +19,7 @@ export class SmartTables {
   filmsList = []
   selectedItem = {}
   filmsCopy = []
+  movieLevel = ''
 
   settings = {
     columns: {
@@ -86,6 +87,18 @@ export class SmartTables {
     this.selectedItem = item
     console.log('Selected Item');
     console.log(item)
+    if (item.rating < 1.6)
+      this.movieLevel = 'Poor'
+    else if (item.rating < 2)
+      this.movieLevel = 'Poor, A Few Good Parts'
+    else if (item.rating < 2.5)
+      this.movieLevel = 'Average'
+    else if(item.rating < 3.1)
+      this.movieLevel = 'Fairly Good'
+    else if(item.rating < 4)
+      this.movieLevel = 'Good'
+    else if(item.rating < 5)
+      this.movieLevel = 'Very Good'
   }
 
   goBack(): void{

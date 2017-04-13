@@ -32,14 +32,16 @@
 	}
 </style>
 
-<div class="button-wrapper" [hidden]="!selectedItem.film" (click)="goBack()">
+<div class="row" [hidden]="!selectedItem.film" (click)="goBack()">
+<div class="col-md-12" style="margin-bottom: 2%">
   <button class="btn btn-default floatLeft" type="button">Back</button>
   <button class="btn btn-default floatRight" type="button">View All Films</button>
+</div>
 </div>
 
   <div class="row" [hidden]="selectedItem.film">
   	<div class="col-md-12">
-	  <div class="search col-xs-10 col-md-4 col-md-offset-4" >
+	  <div class="search col-xs-12 col-md-4 col-md-offset-4" >
 	    <i class="fa fa-search" style="margin: 2px 13px 2px 13px;"></i>
 	    <input #searchBox id="searchInput" type="text" placeholder="Search for..." (keyup)="search(searchBox.value)">
 	  </div>
@@ -62,26 +64,27 @@
 
   <div class="row" style="text-align: center" [hidden]="!selectedItem.film">
 
-  		<div class="row" style="text-align: left;margin-bottom: 2%">
-  		<div class="col-xs-12 col-md-6" style="text-align: center;">
+  		<div class="col-md-12" style="text-align: left;margin-bottom: 2%">
+  		<div class="col-xs-12 col-md-6" style="text-align: center; float: left">
             <div style="boder:2px solid;padding:1%">
-            <img src="{{selectedItem.film_url}}" style="width: 35%;float:right">
+            <img src="{{selectedItem.film_url}}" style="width: 50%;margin: 0 auto">
             </div>
         </div>
-        <div class="col-xs-12 col-md-6">
-        	<div style="padding-top: 2%" class="col-md-12">
+        <div class="col-xs-12 col-md-6" style="float: left">
+        	<div style="padding-top: 4%" class="col-md-12">
             <a class="filmName">{{selectedItem.film}}</a>
             </div>
-           <div class="col-md-12" style="padding-top: 2%"><span>{{selectedItem.story}}</span></div>
-           <div class="col-md-12" style="padding-top: 2%"><span>Director : </span> {{selectedItem.director}}</div>
+           <div class="col-md-12" style="padding-top: 4%"><span>{{selectedItem.story}}</span></div>
+           <div class="col-md-12" style="padding-top: 4%"><span>Director : </span> {{selectedItem.director}}</div>
            <div class="col-md-12"><span>Casts : </span> {{selectedItem.cast}}</div>
-           <div class="col-md-12" style="padding-top: 2%">
+           <div class="col-md-12" style="padding-top: 4%">
            	 <i class="fa fa-star" aria-hidden="true" ng></i>
            	 {{selectedItem.rating}}
            </div>
 
         </div>
         </div>
+        <div style="clear: both;"></div>
         
         <div class="col-md-4 resCard" [hidden]="!selectedItem.imdb">
         	<span>IMDB</span>

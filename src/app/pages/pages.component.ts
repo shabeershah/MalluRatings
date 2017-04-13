@@ -19,15 +19,18 @@ import { PageService } from './pages.service';
     </div>
     <footer class="al-footer clearfix">
 
-      <div class="al-footer-right">Created with 
-      <img src="assets/img/heart_animated.gif" width="25px">
+      <div class="al-footer-right">
+      <div class="col-md-12">
+        <div class="dropdown al-user-profile" style="float:left;margin-right:25px">
+          <a class="myProfile" id="user-profile-dd" href="https://www.linkedin.com/in/shabeershah/">
+            <img src="{{ ( 'shab' | baProfilePicture ) }}" >
+          </a>
+        </div>
+       Created with <img src="assets/img/heart_animated.gif" width="25px">
+      </div>
       </div>
 
-       <div class="dropdown al-user-profile">
-      <a class="myProfile" id="user-profile-dd" href="https://www.linkedin.com/in/shabeershah/">
-        <img src="{{ ( 'shab' | baProfilePicture ) }}" style="position: absolute;top: -32%;left: -25%;">
-      </a>
-    </div>
+       
       <div class="al-footer-main clearfix">
         <ul class="al-share clearfix">
           <li>{{ visitors_count }} Visitors today !</li>

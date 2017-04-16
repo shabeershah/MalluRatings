@@ -3,6 +3,9 @@
 <style>
 	.resCard {
 		padding: 1%;
+		width: 27% !important;
+		float: left;
+		margin: 1%
 	}
 	.resCard .score{
 		    font-size: 30px;
@@ -34,8 +37,8 @@
 
 <div class="row" [hidden]="!selectedItem.film" (click)="goBack()">
 <div class="col-md-12" style="margin-bottom: 2%">
-  <button class="btn btn-default floatLeft" type="button">Back</button>
-  <button class="btn btn-default floatRight" type="button">View All Films</button>
+  <button class="btn btn-primary floatLeft" type="button">Back</button>
+  <button class="btn btn-primary floatRight" type="button">View All Films</button>
 </div>
 </div>
 
@@ -86,43 +89,43 @@
         </div>
         <div style="clear: both;"></div>
         
-        <div class="col-md-4 col-xs-6 col-sm-6 resCard" [hidden]="!selectedItem.imdb">
+        <div class="resCard" [hidden]="!selectedItem.imdb">
         	<span>IMDB</span>
         	<span class="score">{{selectedItem.imdb}}/10</span>
 	    </div>
-	    <div class="col-md-4 col-xs-6 col-sm-6 resCard" [hidden]="!selectedItem.bookmyshow">
+	    <div class="resCard" [hidden]="!selectedItem.bookmyshow">
         	<span>BOOKMYSHOW</span>
         	<span class="score">{{selectedItem.bookmyshow}}/5</span>
 	    </div>
-	    <div class="col-md-4 col-xs-6 col-sm-6 resCard" [hidden]="!selectedItem.behindwoods">
+	    <div class="resCard" [hidden]="!selectedItem.behindwoods">
         	<span>BEHINDWOODS</span>
         	<span class="score">{{selectedItem.behindwoods}}/5</span>
 	    </div>
-	    <div class="col-md-4 col-xs-6 col-sm-6 resCard" [hidden]="!selectedItem.lensmen">
+	    <div class="resCard" [hidden]="!selectedItem.lensmen">
         	<span>LENSMEN</span>
         	<span class="score">{{selectedItem.lensmen}}/5</span>
 	    </div>
-	    <div class="col-md-4 col-xs-6 col-sm-6 resCard" [hidden]="!selectedItem.filmibeat">
+	    <div class="resCard" [hidden]="!selectedItem.filmibeat">
         	<span>FILMIBEAT</span>
         	<span class="score">{{selectedItem.filmibeat}}/5</span>
 	    </div>
-	    <div class="col-md-4 col-xs-6 col-sm-6 resCard" [hidden]="!selectedItem.firstpost">
+	    <div class="resCard" [hidden]="!selectedItem.firstpost">
         	<span>FIRSTPOST</span>
         	<span class="score">{{selectedItem.firstpost}}/5</span>
 	    </div>
-	    <div class="col-md-4 col-xs-6 col-sm-6 resCard" [hidden]="!selectedItem.indiaglitz">
+	    <div class="resCard" [hidden]="!selectedItem.indiaglitz">
         	<span>INDIAGLITZ</span>
         	<span class="score">{{selectedItem.indiaglitz}}/5</span>
 	    </div>
-	    <div class="col-md-4 col-xs-6 col-sm-6 resCard" [hidden]="!selectedItem.nowrunning">
+	    <div class="resCard" [hidden]="!selectedItem.nowrunning">
         	<span>NOWRUNNING</span>
         	<span class="score">{{selectedItem.nowrunning}}/5</span>
 	    </div>
-	    <div class="col-md-4 col-xs-6 col-sm-6 resCard" [hidden]="!selectedItem.timesofindia">
+	    <div class="resCard" [hidden]="!selectedItem.timesofindia">
         	<span>TIMESOFINDIA</span>
         	<span class="score">{{selectedItem.timesofindia}}/5</span>
 	    </div>
-	    <div class="col-md-4 col-xs-6 col-sm-6 resCard" [hidden]="!selectedItem.malluratings">
+	    <div class="resCard" [hidden]="!selectedItem.malluratings">
         	<span>MALLURATINGS</span>
         	<span class="score">{{selectedItem.malluratings}}/5</span>
 	    </div>

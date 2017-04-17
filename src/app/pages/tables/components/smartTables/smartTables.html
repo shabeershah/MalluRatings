@@ -43,13 +43,14 @@
 </div>
 
   <div class="row" [hidden]="selectedItem.film">
-  	<div class="col-md-12" style="padding: 2%">
+  	<div class="col-md-12" style="margin-bottom: 2%">
+  	<div class="col-md-6" style="margin: 0  auto">
 	  <div class="search" >
 	    <i class="fa fa-search" style="margin: 2px 13px 2px 13px;"></i>
 	    <input #searchBox id="searchInput" type="text" placeholder="Search for..." (keyup)="search(searchBox.value)" style=" width: 100%;">
 	  </div>
 	  </div>
-	  <div class="clearfix"></div>
+	  </div>
   		
   		<div class="col-xs-6 col-md-2" *ngFor="let item of filmsList; let myIndex = index" style="text-align: center;">
             <div style="boder:2px solid;padding:1%" (click)="selectFilm(item)">
@@ -68,12 +69,12 @@
   <div class="row" style="text-align: center" [hidden]="!selectedItem.film">
 
   		<div class="col-md-12" style="text-align: left;margin-bottom: 2%">
-  		<div class="col-xs-12 col-md-6" style="text-align: center; float: left">
+  		<div class="col-xs-12 col-md-4" style="text-align: center; float: left">
             <div style="boder:2px solid;padding:1%">
-            <img src="{{selectedItem.film_url}}" style="width: 50%;margin: 0 auto">
+            <img src="{{selectedItem.film_url}}" style="width: 45%;margin: 0 auto">
             </div>
         </div>
-        <div class="col-xs-12 col-md-6" style="float: left">
+        <div class="col-xs-12 col-md-8" style="float: left">
         	<div style="padding-top: 4%" class="col-md-12">
             <a class="filmName">{{selectedItem.film}}</a>
             </div>

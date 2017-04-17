@@ -42,7 +42,7 @@ import { PageService } from './pages.service';
 })
 export class Pages {
   
-  visitors_count = 2
+  visitors_count = ''
   constructor(private _menuService: BaMenuService,private page_service: PageService) {
   }
 

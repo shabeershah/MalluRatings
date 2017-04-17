@@ -52,7 +52,8 @@
 	  </div>
 	  </div>
   		
-  		<div class="col-xs-6 col-md-2" *ngFor="let item of filmsList; let myIndex = index" style="text-align: center;">
+  		<div class="col-xs-6 col-md-2" *ngFor="let item of filmsList; let myIndex = index" 
+  		style="text-align:center;float:left;width:50%">
             <div style="boder:2px solid;padding:1%" (click)="selectFilm(item)">
             <img src="{{item.film_url}}"style=" width: 75%;">
             <div style="padding: 3%">

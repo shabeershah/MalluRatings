@@ -7,6 +7,7 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { routing }       from './tables.routing';
 import { Tables } from './tables.component';
 import { SmartTables } from './components/smartTables/smartTables.component';
+import { SafePipe } from './components/smartTables/smartTables.pipe';
 import { SmartTablesService } from './components/smartTables/smartTables.service';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { SmartTablesService } from './components/smartTables/smartTables.service
   declarations: [
     Tables,
     SmartTables,
+    SafePipe
   ],
   providers: [
     SmartTablesService,

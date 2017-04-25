@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component,Pipe, PipeTransform } from '@angular/core';
 
 import { SmartTablesService } from './smartTables.service';
 import { LocalDataSource } from 'ng2-smart-table';
 import { ModalDirective } from 'ng2-bootstrap';
+import { DomSanitizer} from '@angular/platform-browser';
+
 
 
 import 'style-loader!./smartTables.scss';
@@ -126,5 +128,8 @@ export class SmartTables {
     }
   }
 }
+
+
+
 
 

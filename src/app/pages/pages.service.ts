@@ -17,8 +17,8 @@ export class PageService {
   'Content-Type': 'application/json; charset=utf-8'});
 
   getDailyHits() : Observable<any> {
-   //return this.http.get("https://film-reviews.herokuapp.com/get/50/films?format=json",{headers: this.headers})
-   return this.http.get("https://film-reviews.herokuapp.com/get/daily/hits/count?format=json",{headers: this.headers})
+   //return this.http.get("https://malluratings.herokuapp.com/get/50/films?format=json",{headers: this.headers})
+   return this.http.get("https://malluratings.herokuapp.com/get/daily/hits/count?format=json",{headers: this.headers})
                .map(response => response.json())
                .catch(this.handleError);
   }
